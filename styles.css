@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.piano-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+#volume-slider {
+    width: 100px;
+}
+
+#voice-mode {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.piano {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.key {
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.white {
+    width: 60px;
+    height: 220px;
+    background: linear-gradient(to bottom, #fff 0%, #ccc 100%);
+    margin: 0 3px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.black {
+    width: 40px;
+    height: 140px;
+    background: linear-gradient(to bottom, #000 0%, #555 100%);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.key span {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.note-label {
+    top: 5px;
+    left: 5px;
+}
+
+.key-label {
+    bottom: 5px;
+    right: 5px;
+}
+
+.key.active {
+    background-color: #ffcccc;
+    transform: scale(0.98);
+    transition: transform 0.1s, background-color 0.1s;
+}
