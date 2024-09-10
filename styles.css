@@ -112,3 +112,9 @@ body {
     transform: scale(0.98);
     transition: transform 0.1s, background-color 0.1s;
 }
+
+@media screen and (max-width:768px){
+    .piano-container{
+        transform: rotate(90deg);
+    }
+}
